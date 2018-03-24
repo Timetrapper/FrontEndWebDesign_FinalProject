@@ -4,3 +4,5 @@ SSD FEWD team project
 3/23 update
 -----------------------------------
 test pull/push
+
+add schedule pages
