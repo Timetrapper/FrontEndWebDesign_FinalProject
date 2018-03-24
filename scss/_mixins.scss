@@ -1,0 +1,34 @@
+// Mixins
+
+// Mixin for centering element
+// with margin-left: auto
+// and margin-right: auto;
+@mixin center($margin-center: true, $zero-margin: true){
+    @if($margin-center){
+        @if($zero-margin){
+            margin: 0 auto;
+        }@else {
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+    }@else {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @if($zero-margin){
+            margin: 0;
+        }
+    }
+}
+
+@mixin flatten($list: false) {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    @if($list){
+        list-style: none;
+    }
+}

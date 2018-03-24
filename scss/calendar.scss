@@ -1,0 +1,82 @@
+@import 'variables';
+
+@mixin center($mc: true, $zero-mr: true) {
+
+    @if($mc){
+
+        @if($zero-mr){
+            margin: 0 auto;
+        }@else{
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+
+    }@else{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @if($zero-mr){
+            margin: 0;
+        }
+    }
+}
+
+@mixin listView($list: false){
+    @if($list){
+        display: block;
+    }@else{
+        display: none;
+    }
+}
+
+.month {
+    display: grid;
+    padding: 15px;
+    grid-gap: 2px;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 40px;
+    background-color: $calendar-panel-color;
+    border-radius: 10px;
+    h1 {
+        grid-column: span 5;
+        margin: 0;
+    }
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+    text-align: start;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.day-of-week {
+    display: none;
+}
+
+.instructor {
+    color: rgb(31, 134, 168);
+}
+
+.button-toggler {
+    display: flex;
+    margin-left: 15px;
+    button{
+        background-color:  $calendar-panel-color; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+        outline: none;
+    }
+}

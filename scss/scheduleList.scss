@@ -1,0 +1,102 @@
+@import 'variables';
+
+@mixin center($mc: true, $zero-mr: true) {
+
+    @if($mc){
+
+        @if($zero-mr){
+            margin: 0 auto;
+        }@else{
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+
+    }@else{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @if($zero-mr){
+            margin: 0;
+        }
+    }
+}
+
+@mixin listView($list: false){
+    @if($list){
+        display: block;
+    }@else{
+        display: none;
+    }
+}
+
+body {
+    background-color: lightblue;
+    display: flex;
+    text-align: center;
+}
+
+.wrapper {
+    background-color: white;
+    @include center;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    @include center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.month {
+    display: flex;
+    flex-direction: column;
+    background-color: $calendar-panel-color;
+    text-align: left;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    h2 {
+        display: none;
+    }
+    h1 {
+        padding-left: 15px;
+    }
+}
+
+.day {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;   
+}
+
+.empty-month-start {
+    display: none;
+}
+
+.instructor {
+    color: rgb(31, 134, 168);
+    text-align: right;
+}
+
+.button-toggler {
+    display: flex;
+    margin-left: 15px;
+    button{
+        background-color:  $calendar-panel-color; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;   
+        outline: none;     
+    }
+}
