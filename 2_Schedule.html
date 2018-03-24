@@ -14,11 +14,13 @@
     <!-- navbar integration -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
-        $.get("navigation.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
+        $.get("navigation_head.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+    $.get("navigation-footer.html", function(data){
+        $("#nav-foot-placeholder").replaceWith(data);
+    });
     </script>
-
     <script>
 
         var calendarView = true
@@ -39,6 +41,9 @@
 
     </script>
 </head>
+<header>
+    <div id="nav-placeholder"></div>
+</header>
 <body class="schedule-body">
     <div class="wrapper">
         <header>
@@ -302,4 +307,7 @@
         <!-- </div> -->
     </div>
 </body>
+<footer>
+    <div id="nav-foot-placeholder"></div>
+</footer>
 </html>
