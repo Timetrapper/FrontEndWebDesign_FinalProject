@@ -30,5 +30,26 @@ $padding: rem($space);
 $half-padding: rem(($space / 2));
 
 
+// Breakpoints
+$tablet-landscape: em(1024);
+$tablet-landscape-medium: em(860);
+$tablet-portait: em(768);
+$tablet-portrait-medium: em(720);
+$phone-wide: em(580);
+$phone: em(480);
+
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+$phoneBorder : 700px;
+
+
+
+
+
 // Utility Variables
 $link-hover-selector: '&:hover, &:focus, &:active';

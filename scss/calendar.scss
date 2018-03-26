@@ -1,5 +1,6 @@
 @import 'variables';
 
+
 @mixin center($mc: true, $zero-mr: true) {
 
     @if($mc){
@@ -29,6 +30,13 @@
         display: block;
     }@else{
         display: none;
+    }
+}
+
+// Media Query Mixin
+@mixin mq($w) {
+    @media (max-width: $w) {
+        @content;
     }
 }
 
@@ -80,3 +88,18 @@
         outline: none;
     }
 }
+
+#calendar-toggle{
+    color: black;
+}
+
+.schedule-month{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.calender-day-of-week{
+    text-align: center;
+    background-color: rgb(189, 177, 177);
+}
+

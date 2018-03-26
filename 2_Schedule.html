@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>calendar test</title>
+    
     <link id="styleElement" rel="stylesheet" href="./styles/calendar.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,7 +40,26 @@
             }
         }
 
+
+
+        console.log($(window).width())
+
     </script>
+    <script>
+            //there is a samll bug here about transfer list and calendar view, will fix later
+            $(document).ready(function(){
+                $(window).resize(function(){
+                    let styleEl = document.getElementById('styleElement')
+                    if ($(window).width() < 850){
+                        styleEl.href = "./styles/scheduleList.css"
+                        document.getElementById('calendar-toggle').style.display = "none"
+                    }else {            
+                         document.getElementById('calendar-toggle').style.display = "flex"
+                    }
+                 });
+            });
+    </script>
+   
 </head>
 <header>
     <div id="nav-placeholder"></div>
@@ -59,12 +79,12 @@
 
             <div class="calendar-container">
                 <div class="month">
-                    <h1>September</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">September</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day"><h3 class="day-of-week">Monday</h3><h3 class="date">September 11, 2017</h3><p class="subject">Orientation / Study Skills</p><p class="instructor">Pat McGee / Marlene Delanghe</p></div>
                     <div class="day"><h3 class="day-of-week">Tuesday</h3><h3 class="date">September 12, 2017</h3><p class="subject">Team Building / Prof Communication</p><p class="instructor">Marlene Delanghe</p></div>
                     <div class="day"><h3 class="day-of-week">Wednesday</h3><h3 class="date">September 13, 2017</h3><p class="subject">OO Programming in C# (Part 1)</p><p class="instructor">Pat McGee</p></div>
@@ -84,12 +104,12 @@
                     <div class="day"><h3 class="day-of-week">Friday</h3><h3 class="date">September 29, 2017</h3><p class="subject">OO Programming in C# (Part 1)</p><p class="instructor">Pat McGee</p></div>
                 </div>
                 <div class="month">
-                    <h1>October</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">October</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     
                     <div class="day"><h3 class="day-of-week">Monday</h3><h3 class="date">October 2, 2017</h3><p class="subject">Front End Web Design, Scripting, and Tooling - Part I</p><p class="instructor">Michael Whyte</p></div>
                     <div class="day"><h3 class="day-of-week">Tuesday</h3><h3 class="date">October 3, 2017</h3><p class="subject">Systems Analysis and Design</p><p class="instructor">Pat McGee</p></div>
@@ -119,12 +139,12 @@
                     <div class="day"><h3 class="day-of-week">Tuesday</h3><h3 class="date">October 31, 2017</h3><p class="subject">OO Programming in C# (Part 2)</p><p class="instructor">Pat McGee</p></div>
                 </div>
                 <div class="month">
-                    <h1>November</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">November</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day"><h3 class="day-of-week">Wednesday</h3><h3 class="date">November 1, 2017</h3><p class="subject">Flex day (no class is currently scheduled but this could change)</p><p class="instructor"></p></div>
@@ -155,12 +175,12 @@
                     <div class="day"><h3 class="day-of-week">Thursday</h3><h3 class="date">November 30, 2017</h3><p class="subject">ASP.NET - 1</p><p class="instructor">Pat McGee</p></div>
                 </div>
                 <div class="month">
-                    <h1>December</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">December</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
@@ -180,12 +200,12 @@
                     <div class="day"><h3 class="day-of-week">Friday</h3><h3 class="date">December 15, 2017</h3><p class="subject">Project 1 - Phase 1</p><p class="instructor">Pat McGee</p></div>
                 </div>
                 <div class="month">
-                    <h1>January</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">January</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day"><h3 class="day-of-week">Monday</h3><h3 class="date">January 8, 2018</h3><p class="subject">JavaScript (Part 2)</p><p class="instructor">Jason Harrison</p></div>
                     <div class="day"><h3 class="day-of-week">Tuesday</h3><h3 class="date">January 9, 2018</h3><p class="subject">PHP / MySQL</p><p class="instructor">Jeff Parker</p></div>
                     <div class="day"><h3 class="day-of-week">Wednesday</h3><h3 class="date">January 10, 2018</h3><p class="subject">ASP.NET - 1</p><p class="instructor">Pat McGee</p></div>
@@ -209,12 +229,12 @@
                     <div class="day"><h3 class="day-of-week">Wednesday</h3><h3 class="date">January 31, 2018</h3><p class="subject">ASP.NET - 2</p><p class="instructor">Pat McGee</p></div>
                 </div>
                 <div class="month">
-                    <h1>February</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">February</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
@@ -244,12 +264,12 @@
                     <div class="day"><h3 class="day-of-week">Wednesday</h3><h3 class="date">February 28, 2018</h3><p class="subject">MEAN (Mongo, ExpressJS, Angular, Node)</p><p class="instructor">Medhat Elmasry</p></div>
                 </div>
                 <div class="month">
-                    <h1>March</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">March</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
                     <div class="day empty-month-start"><h3 class="date"></h3><p class="subject"></p><p class="instructor"></p></div>
@@ -281,12 +301,12 @@
                     <div class="day"><h3 class="day-of-week">Friday</h3><h3 class="date">March 30, 2018</h3><p class="subject">BCIT Closed Good Friday</p><p class="instructor"></p></div>
                 </div>
                 <div class="month">
-                    <h1>April</h1>
-                    <h2>Monday</h2>
-                    <h2>Tuesday</h2>
-                    <h2>Wednesday</h2>
-                    <h2>Thursday</h2>
-                    <h2>Friday</h2>
+                    <h1 class="schedule-month">April</h1>
+                    <h2 class="calender-day-of-week">Monday</h2>
+                    <h2 class="calender-day-of-week">Tuesday</h2>
+                    <h2 class="calender-day-of-week">Wednesday</h2>
+                    <h2 class="calender-day-of-week">Thursday</h2>
+                    <h2 class="calender-day-of-week">Friday</h2>
                     <div class="day"><h3 class="day-of-week">Monday</h3><h3 class="date">April 2, 2018</h3><p class="subject">BCIT Closed Easter Monday</p><p class="instructor"></p></div>
                     <div class="day"><h3 class="day-of-week">Tuesday</h3><h3 class="date">April 3, 2018</h3><p class="subject">Project 1 - Phase 3</p><p class="instructor">Pat McGee</p></div>
                     <div class="day"><h3 class="day-of-week">Wednesday</h3><h3 class="date">April 4, 2018</h3><p class="subject">Front End Web Design, Scripting, and Tooling - Part II</p><p class="instructor">Michael Whyte</p></div>
