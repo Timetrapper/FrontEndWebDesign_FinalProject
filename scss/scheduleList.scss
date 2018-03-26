@@ -59,7 +59,7 @@ body {
     text-align: left;
     margin-top: 15px;
     padding: 15px;
-    border-radius: 10px;
+    border-style:dashed;
     h2 {
         display: none;
     }
@@ -74,6 +74,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     background-color: white;   
+    font-family: "Lucida Console", Monaco, monospace
 }
 
 .empty-month-start {
@@ -98,7 +99,7 @@ body {
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        border-radius: 10px;   
+        border-style:dashed;   
         outline: none;     
     }
     //display: none;
@@ -129,4 +130,5 @@ body {
 
 .schedule-title{
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
