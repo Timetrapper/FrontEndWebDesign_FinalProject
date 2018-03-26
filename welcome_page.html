@@ -13,7 +13,6 @@
 
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
-    <!-- navbar integration -->
     <script>
         $.get("navigation_head.html", function (data) {
             $("#nav-placeholder").replaceWith(data);
@@ -25,25 +24,23 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <div id="nav-placeholder"></div>
-        </header>
-        <main>
-            <div class="wrapper">
-                <h1>Software Systems Developer </h1>
-                <h2>- Web Programmer Option</h2>
-                <div id="programmer-image">
-                    <img src="images/ssdprogramer.jpg" alt="SSD_programmer">
-                </div>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>Software Systems Developer </h1>
+            <h2>- Web Programmer Option</h2>
+            <div id="programmer-image">
+                <img src="images/ssdprogramer.jpg" alt="SSD_programmer">
             </div>
+        </div>
+    </main>
 
-        </main>
-
-        <footer>
-            <div id="nav-foot-placeholder"></div>
-        </footer>
-    </div>
+    <footer>
+        <div id="nav-foot-placeholder"></div>
+    </footer>
 </body>
 
 </html>
