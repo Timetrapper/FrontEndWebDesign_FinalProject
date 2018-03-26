@@ -18,7 +18,18 @@
   ,form = layui.form;
   var userFirstName = document.getElementById("form_name").value
   console.log(userFirstName)
-  layer.msg('Thank You, '+userFirstName+'. We have received your information and will contact you shortly.');
+  var userLastName = document.getElementById("form_lastname").value
+  var userEmail = document.getElementById("form_email").value 
+  var userMessage = document.getElementById("form_message").value  
+
+if (userFirstName == "" || userLastName == "" ||userEmail == "" || userMessage== ""){
+    layer.msg('You missed something my friend!');
+}
+else {
+    layer.msg('Thank You, '+userFirstName+'. We have received your information and will contact you shortly.');
+}
+
+  
 });
     }
     </script>
