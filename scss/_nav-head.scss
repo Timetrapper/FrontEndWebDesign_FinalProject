@@ -1,15 +1,11 @@
 .head-nav{
     background-color: $top-nav-color;
     display: flex;
-    
-    
-
     ul {
         list-style-type: none;
         display: flex;
         padding: 0;
-        
-        
+               
         @include flatten(true);
     }
 

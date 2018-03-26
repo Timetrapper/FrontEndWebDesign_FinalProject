@@ -1,7 +1,13 @@
 .banner{
-    background-color: $bg-banner-color;
-    color: #fff;
-    p{
-        margin: 0;
-    }
+    height: 200px;
+    padding: 0px;
+    background-image: url("../images/newtobcit_banner.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
