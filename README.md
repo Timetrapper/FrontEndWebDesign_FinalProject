@@ -3,7 +3,7 @@ SSD FEWD team project
 
 3/25 update
 -----------------------------------------
-add contact page 
+add contact page , make schedule page fully responsive
 
 3/24 update
 ------------------------------------
