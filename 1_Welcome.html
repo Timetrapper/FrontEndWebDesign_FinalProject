@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Welcome</title>
+
+    <link id="styleElement" rel="stylesheet" href="./styles/welcome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- navbar integration -->
+    <script>
+        $.get("navigation_head.html", function (data) {
+            $("#nav-placeholder").replaceWith(data);
+        });
+        $.get("navigation-footer.html", function (data) {
+            $("#nav-foot-placeholder").replaceWith(data);
+        });
+    </script>
 </head>
-<script>
-    $.get("navigation_head.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
-});
-$.get("navigation-footer.html", function(data){
-    $("#nav-foot-placeholder").replaceWith(data);
-});
-</script>
+
 <body>
     <div class="wrapper">
         <header>
             <div id="nav-placeholder"></div>
         </header>
         <main>
+            <section class="welcome">
             <h1>I'm the content!</h1>
+            </section>
+            
         </main>
         <footer>
             <div id="nav-foot-placeholder"></div>
         </footer>
     </div>
 </body>
+
 </html>
