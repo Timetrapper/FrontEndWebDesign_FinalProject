@@ -1,7 +1,11 @@
-@import 'styles';
 
-.programOverviewTable { 
-    text-align: center;
+
+table.programOverviewTable {
+    //width: 400px;
     border: black;
+}
+
+#program-overview-table-container {
+    display: flex; justify-content: center;
 
 }
