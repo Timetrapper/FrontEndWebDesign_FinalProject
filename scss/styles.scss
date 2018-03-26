@@ -11,18 +11,87 @@
 // Typography
 @import 'typography';
 
-// HTML Sections
-@import 'wrapper';
-@import 'body';
-@import 'banner';
-@import 'nav-head';
-@import 'nav-main';
-@import 'nav-footer';
-@import 'features';
-@import 'events';
-@import 'container';
-@import 'listformat';
-@import 'table';
 
+body {
+    background-color: $bg-body-color;
+}
 
+.schedule-body {
+    display: flex;
+    text-align: center;
+}
 
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    ul li a{
+        text-decoration: none;
+    }
+
+    p{
+        text-indent: 40px;
+    }
+
+    
+}
+
+.calendar-container{
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    h1, h2 {
+        color: white;
+    }
+}
+.para p{
+    text-indent: 0px;
+    margin-left: 40px;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.list{
+    list-style: none;
+}
+
+.italic{
+    font-style: italic;
+}
+
+table{
+    background-color: $bg-table-color;
+    
+    th, td{
+        border: 2px solid white;
+        padding: 20px;
+    }
+}
+
+.imgformat{
+    width: 80px; 
+    height: 70px;
+}
+
+.wrapper{
+    background-color: $bg-wrapper-color;
+    max-width: $site-width;
+    padding: 0 30px;
+    @include center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.features{
+    background-color: $section-features-color;
+}

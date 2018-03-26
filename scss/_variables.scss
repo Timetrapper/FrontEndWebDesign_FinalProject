@@ -5,7 +5,7 @@ $space: 30;
 
 // BG Colors
 $bg-wrapper-color: #ffffff;
-$bg-body-color: #ffffff;
+$bg-body-color: grey;
 $top-nav-color: #30393a;
 $main-nav-color: #ffffff;
 $main-nav-font-color: #870d0d;
@@ -23,12 +23,10 @@ $calendar-panel-color: #66ffcc;
 // Border Colors
 $main-nav-border-bottom-color: #f3f3f1;
 
-
 // Layout Variables
 $site-width: 1920px;
 $padding: rem($space);
 $half-padding: rem(($space / 2));
-
 
 // Breakpoints
 $tablet-landscape: em(1024);
@@ -38,7 +36,6 @@ $tablet-portrait-medium: em(720);
 $phone-wide: em(580);
 $phone: em(480);
 
-
 // Media Query Breakpoints
 $desktopMedium: em(1250);
 $tabletLandscape: em(1024);
@@ -46,10 +43,6 @@ $tabletPortrait: em(850);
 $phoneLandscape: em(670);
 $phonePortrait: em(420);
 $phoneBorder : 700px;
-
-
-
-
 
 // Utility Variables
 $link-hover-selector: '&:hover, &:focus, &:active';

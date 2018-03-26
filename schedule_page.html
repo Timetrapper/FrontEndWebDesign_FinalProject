@@ -16,7 +16,7 @@
         $.get("navigation_head.html", function (data) {
             $("#nav-placeholder").replaceWith(data);
         });
-        $.get("navigation-footer.html", function (data) {
+        $.get("navigation_footer.html", function (data) {
             $("#nav-foot-placeholder").replaceWith(data);
         });
     </script>
@@ -50,6 +50,7 @@
                     styleEl.href = "./styles/scheduleList.css"
                     document.getElementById('calendar-toggle').style.display = "none"
                 } else {
+                    styleEl.href = "./styles/calendar.css"
                     document.getElementById('calendar-toggle').style.display = "flex"
                 }
             });
@@ -63,7 +64,7 @@
     </header>
     <main>
         <div class="wrapper">
-            <h1>2017 / 2018 Schedule</h1>
+            <h2 class="schedule-title">2017.9 - 2018.5 Schedule</h2>
 
             <!-- <div class="container"> -->
 
