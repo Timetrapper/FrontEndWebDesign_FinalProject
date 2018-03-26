@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>E-Resources</title>
-    <!-- <link id="styleElement" rel="stylesheet" href="./styles/eresources.css"> -->
+    <title>Welcome</title>
+
+    <link id="styleElement" rel="stylesheet" href="./styles/welcome.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
+    <!-- navbar integration -->
     <script>
         $.get("navigation_head.html", function (data) {
             $("#nav-placeholder").replaceWith(data);
         });
-        $.get("navigation-footer.html", function (data) {
+        $.get("navigation_footer.html", function (data) {
             $("#nav-foot-placeholder").replaceWith(data);
         });
     </script>
@@ -28,8 +30,16 @@
             <div id="nav-placeholder"></div>
         </header>
         <main>
-            <h1>I'm the content!</h1>
+            <div class="wrapper">
+                <h1>Software Systems Developer </h1>
+                <h2>- Web Programmer Option</h2>
+                <div id="programmer-image">
+                    <img src="images/ssdprogramer.jpg" alt="SSD_programmer">
+                </div>
+            </div>
+
         </main>
+
         <footer>
             <div id="nav-foot-placeholder"></div>
         </footer>
