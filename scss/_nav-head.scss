@@ -1,3 +1,17 @@
+.banner{
+    min-height: 200px;
+    padding: 0px;
+    background-image: url("../images/newtobcit_banner.jpg");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .head-nav{
     background-color: $top-nav-color;
     display: flex;
