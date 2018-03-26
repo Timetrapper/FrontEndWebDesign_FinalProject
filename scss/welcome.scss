@@ -1,44 +1,7 @@
 @import 'variables';
-
-
-
-@mixin center($mc: true, $zero-mr: true) {
-    @if($mc){
-
-        @if($zero-mr){
-            margin: 0 auto;
-        }@else{
-            margin: {
-                left: auto;
-                right: auto;
-            }
-        }
-
-    }@else{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @if($zero-mr){
-            margin: 0;
-        }
-    }
-}
-
-@mixin listView($list: false){
-    @if($list){
-        display: block;
-    }@else{
-        display: none;
-    }
-}
-
-// Media Query Mixin
-@mixin mq($w) {
-    @media (max-width: $w) {
-        @content;
-    }
-}
+@import 'mixins';
+@import 'functions';
+@import 'resets';
 
 .button-toggler {
     display: flex;
@@ -55,4 +18,16 @@
         border-radius: 10px;
         outline: none;
     }
+}
+
+// Welcome Section styles
+.welcome {
+    // @include first-last-el-no-margin;
+    // .some-row {
+    //     @include flex-layout-row;
+    //     .a-01,
+    //     .a-02 {
+    //         @extend %row-item;
+    //     }
+    // }
 }

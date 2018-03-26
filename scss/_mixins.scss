@@ -40,3 +40,41 @@
         @content;
     }
 }
+
+// List View Mixin
+@mixin listView($list: false){
+    @if($list){
+        display: block;
+    }@else{
+        display: none;
+    }
+}
+
+// Clear margins
+@mixin first-last-el-no-margin {
+    > :first-child {
+        margin-top: 0;
+    }
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Layout Mixins
+// Mixins for creating a flex row of
+// and evenly spacing out the
+// elements along the row
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+// Center elements in a flex
+// container
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
