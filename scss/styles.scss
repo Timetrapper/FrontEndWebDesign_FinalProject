@@ -11,7 +11,6 @@
 // Typography
 @import 'typography';
 
-
 body {
     background-color: $bg-body-color;
 }
@@ -33,9 +32,7 @@ body {
 
     p{
         text-indent: 40px;
-    }
-
-    
+    }  
 }
 
 .calendar-container{
@@ -48,6 +45,7 @@ body {
         color: white;
     }
 }
+
 .para p{
     text-indent: 0px;
     margin-left: 40px;
@@ -86,7 +84,7 @@ table{
 .wrapper{
     background-color: $bg-wrapper-color;
     max-width: $site-width;
-    padding: 0 30px;
+    padding: 0 80px;
     @include center;
     overflow: hidden;
     margin: 0 auto;
