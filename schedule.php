@@ -13,10 +13,10 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
         $.get("navigation_head.html", function (data) {
-            $("#nav-placeholder").replaceWith(data);
+            $("#header-placeholder").replaceWith(data);
         });
         $.get("navigation_footer.html", function (data) {
-            $("#nav-foot-placeholder").replaceWith(data);
+            $("#footer-placeholder").replaceWith(data);
         });
     </script>
     <script>
@@ -1155,7 +1155,7 @@ echo getMonth($resultData[100]->date);
         </div>
     </main>
     <footer>
-        <div id="nav-foot-placeholder"></div>
+        <div id="footer-placeholder"></div>
     </footer>
 </body>
 

@@ -39,9 +39,20 @@ body {
     text-align: center;
 }
 
-.wrapper {
-    background-color: white;
-    @include center;
+.calendar-container{
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    h1, h2 {
+        color: white;
+    }
+}
+
+.schedule-body {
+    display: flex;
+    text-align: center;
 }
 
 .KARL-calendar-container {
@@ -131,4 +142,9 @@ body {
 .KARL-schedule-title{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+    background-color: white;
+    @include center;
 }

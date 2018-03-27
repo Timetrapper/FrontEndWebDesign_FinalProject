@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='/styles/contact.css' rel='stylesheet' type='text/css'>
+    <script>
+        jQuery(function () {
+            jQuery('#header-placeholder').load('header.html');
+            jQuery('#footer-placeholder').load('footer.html');
+        });
+    </script>
+
     <link rel="stylesheet" href="/scripts/layui-v2.2.5/layui-v2.2.5/layui/css/layui.css">
     <script src="/scripts/layui-v2.2.5/layui-v2.2.5/layui/layui.js"></script>
     <script>
-    showSuccess = function(){
-        layui.use(['layer', 'form'], function(){
-  var layer = layui.layer
-  ,form = layui.form;
-  var userFirstName = document.getElementById("form_name").value
-  console.log(userFirstName)
-  var userLastName = document.getElementById("form_lastname").value
-  var userEmail = document.getElementById("form_email").value 
-  var userMessage = document.getElementById("form_message").value  
+        showSuccess = function () {
+            layui.use(['layer', 'form'], function () {
+                var layer = layui.layer,
+                    form = layui.form;
+                var userFirstName = document.getElementById("form_name").value
+                console.log(userFirstName)
+                var userLastName = document.getElementById("form_lastname").value
+                var userEmail = document.getElementById("form_email").value
+                var userMessage = document.getElementById("form_message").value
 
-if (userFirstName == "" || userLastName == "" ||userEmail == "" || userMessage== ""){
-    layer.msg('You missed something my friend!');
-}
-else {
-    layer.msg('Thank You, '+userFirstName+'. We have received your information and will contact you shortly.');
-}
+                if (userFirstName == "" || userLastName == "" || userEmail == "" || userMessage == "") {
+                    layer.msg('You missed something my friend!');
+                } else {
+                    layer.msg('Thank You, ' + userFirstName +
+                        '. We have received your information and will contact you shortly.');
+                }
 
-  
-});
-    }
+
+            });
+        }
     </script>
 </head>
-<script>
-    $.get("navigation_head.html", function(data){
-    $("#nav-placeholder").replaceWith(data);
-});
-$.get("navigation_footer.html", function(data){
-    $("#nav-foot-placeholder").replaceWith(data);
-});
-</script>
+
 <body>
     <div class="wrapper">
         <header>
-            <div id="nav-placeholder"></div>
+            <div id="header-placeholder"></div>
         </header>
         <main>
             <div class="container">
 
                 <div class="row">
-    
+
                     <div class="col-lg-8 col-lg-offset-2">
-    
+
                         <h1>Contact us </h1>
-                        
+
                         <form id="contact-form" method="post" onsubmit="return false;" role="form">
-    
+
                             <div class="messages"></div>
-    
+
                             <div class="controls">
-    
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_name">Firstname *</label>
-                                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required"
+                                                data-error="Firstname is required.">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_lastname">Lastname *</label>
-                                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required"
+                                                data-error="Lastname is required.">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -82,7 +90,8 @@ $.get("navigation_footer.html", function(data){
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_email">Email *</label>
-                                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required"
+                                                data-error="Valid email is required.">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -95,25 +104,25 @@ $.get("navigation_footer.html", function(data){
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                                <label for="form_phone">Role</label>
+                                            <label for="form_phone">Role</label>
                                             <div class="form-inline">
-                                                
-                                                
+
+
                                                 <div class="form-check">
                                                     <input class="form-check-input" name="group20" type="radio" id="radio120" checked="checked">
-                                                    <label class="form-check-label" for="radio120" >Current Student</label>
+                                                    <label class="form-check-label" for="radio120">Current Student</label>
                                                 </div>
-                                            
+
                                                 <div class="form-check">
                                                     <input class="form-check-input" name="group20" type="radio" id="radio121">
                                                     <label class="form-check-label" for="radio121">Prospective Student</label>
                                                 </div>
-                                            
+
                                                 <div class="form-check">
                                                     <input class="form-check-input" name="group20" type="radio" id="radio122">
                                                     <label class="form-check-label" for="radio122">Instructor</label>
                                                 </div>
-                                            
+
                                             </div>
                                         </div>
                                     </div>
@@ -122,7 +131,8 @@ $.get("navigation_footer.html", function(data){
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="form_message">Message *</label>
-                                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required"
+                                                data-error="Please,leave us a message."></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -132,20 +142,24 @@ $.get("navigation_footer.html", function(data){
                                 </div>
 
                             </div>
-    
+
                         </form>
-    
-                    </div><!-- /.8 -->
-    
-                </div> <!-- /.row-->
-    
-            </div> <!-- /.container-->
+
+                    </div>
+                    <!-- /.8 -->
+
+                </div>
+                <!-- /.row-->
+
+            </div>
+            <!-- /.container-->
         </main>
         <footer>
-            <div id="nav-foot-placeholder"></div>
+            <div id="footer-placeholder"></div>
         </footer>
     </div>
     <!-- <script src="/scripts/validator.js"></script>
     <script src="/scripts/contact.js"></script> -->
 </body>
+
 </html>
