@@ -10,36 +10,70 @@
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" id="bootstrap-css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
     <script>
-        jQuery(function(){
+        jQuery(function () {
             jQuery('#header-placeholder').load('header.html');
             jQuery('#footer-placeholder').load('footer.html');
         });
     </script>
 </head>
 
-<body>
-    <header>
-        <div id="header-placeholder"></div>
-    </header>
+<header>
+    <div id="header-placeholder"></div>
+</header>
 
-    <main>
-        <div class="wrapper">
-            <h1>Software Systems Developer </h1>
-            <h2>- Web Programmer Option</h2>
-            <div id="programmer-image">
-                <img src="images/ssdprogramer.jpg" alt="SSD_programmer">
-            </div>
+<body>
+    <main class="wrapper">
+        <div class="text-center">
+            <h1>Software Systems Developer</h1>
+            <h2>Web Programmer Option</h2>
+        </div>
+
+        <img src="images/ssdprogramer.jpg" id="programmer-image" alt="SSD_programmer">
+
+        <div class="text-center">
+            <h4 class="welcome_padding">Code anything from scratch for any sector. Be an in-demand software programmer.</h4>
+        </div>
+        <div id="info">
+            <p>The Software Systems Developer (SSD) program (Web Programmer option) is an eight month, full-time business application
+                development program offered by BCIT's School of Computing and Academic Studies, within the HTP department
+                at the downtown Vancouver campus.</p>
+
+            <p>During the program, Students in the SSD program are available to work on 4-week web development and design projects.
+                Students will be able to use formal software development methodology and design / implement / test / deploy
+                software applications on a variety of platforms. This includes database applications, web applications, e-commerce
+                sites, etc. on desktop computers, PDAs, web server, specialized hardware or other computing devices.</p>
+        </div>
+
+        <div id="skills-gained-list">
+            <p class="font-weight-bold">SSD students have knowledge of and experience with:</p>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">.NET</li>
+                <li class="list-group-item">Java</li>
+                <li class="list-group-item">HTML / CSS</li>
+                <li class="list-group-item">XML</li>
+                <li class="list-group-item">ASP.NET</li>
+                <li class="list-group-item">PHP</li>
+                <li class="list-group-item">Structured Analysis / Design</li>
+                <li class="list-group-item">Rapid Application Prototyping</li>
+                <li class="list-group-item">Graphics User Interface Design</li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <p class="lead">Navigate the links above, to learn more.</p>
         </div>
     </main>
-
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
 </body>
+
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
 
 </html>
