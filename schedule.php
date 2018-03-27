@@ -12,11 +12,9 @@
     <!-- navbar integration -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
-        $.get("navigation_head.html", function (data) {
-            $("#header-placeholder").replaceWith(data);
-        });
-        $.get("navigation_footer.html", function (data) {
-            $("#footer-placeholder").replaceWith(data);
+        jQuery(function(){
+            jQuery('#header-placeholder').load('header.html');
+            jQuery('#footer-placeholder').load('footer.html');
         });
     </script>
     <script>
@@ -59,7 +57,12 @@
 <?php
 
 function getYear($date){
-    echo explode("-",$date)[0];
+    //echo explode("-",$date)[0];
+    return explode("-",$date)[0];
+}
+
+function getMonthInNumber($date){
+    return explode("-",$date)[1];
 }
 
 function getMonth($date){
@@ -67,36 +70,50 @@ function getMonth($date){
    // echo $numberMonth;
    switch($numberMonth){
        case "01":
-       echo "January";
+       return  "January";
        break;
        case "02":
-       echo "Feburay";
+       return "Feburay";
        break;
        case "03":
-       echo "March";
+       return "March";
        break;
        case "04":
-       echo "April";
+       return "April";
        break;
        case "09":
-       echo "September";
+       return "September";
        break;
        case "10":
-       echo "October";
+       return "October";
        break;
        case "11":
-       echo "November";
+       return "November";
        break;
        case "12":
-       echo "December";
+       return "December";
        break;
    }
 }
 
-function getDayOfWeek(){
-
-    
+function getDayOfWeek($date){
+    $year = getYear($date);
+    $month = getMonthInNumber($date);
+    $numberDayWithTail = explode("-",$date)[2];
+    $Day = explode("T",$numberDayWithTail)[0];
+    //$stringDate = $Day."/".$month."/".$year;
+    $stringDate = $year."-".$month."-".$Day;
+   // $newDate = date_create($stringDate);
+   $unixTimestamp = strtotime($date);
+   $dayOfWeek = date("l", $unixTimestamp);
+  // $date = new DateTime();
+    echo $dayOfWeek;
 }
+
+//get data from api
+$url='http://ssdscheduleapi20180326021240.azurewebsites.net/api/values';
+$result = file_get_contents($url);
+$resultData = json_decode($result);
 
 $months = array("September","October","November","December","January","Feburay","March","April");
 $daysOfWeek = array("Monday","Tuesday","Wednesday","Thursday","Friday");
@@ -108,14 +125,15 @@ echo "<div class='KARL-calendar-container'>";
         foreach ($daysOfWeek as $dayOfWeek){
             echo   "<h2 class='calender-day-of-week'>".$dayOfWeek."</h2>";
         }
-                    // foreach (){
-            //     echo   "<div class='day'>";
-            //     echo   "<h3 class='day-of-week'>".Monday."</h3>";
-            //     echo   "<h3 class='date'>".September 11, 2017."</h3>";
-            //     echo   "<p class='subject'>".Orientation / Study Skills."</p>";
-            //     echo   "<p class='instructor'>".Pat McGee / Marlene Delanghe."</p>";
-            //     echo   "</div>";
-            // }
+                foreach ($resultData as $oneDayData){
+                if (getMonth($resultData->date) )
+                echo   "<div class='day'>";
+                echo   "<h3 class='day-of-week'>".Monday."</h3>";
+                echo   "<h3 class='date'>".September 11, 2017."</h3>";
+                echo   "<p class='subject'>".Orientation / Study Skills."</p>";
+                echo   "<p class='instructor'>".Pat McGee / Marlene Delanghe."</p>";
+                echo   "</div>";
+                }
         echo "</div>";
       }
 
@@ -123,11 +141,10 @@ echo "<div class='KARL-calendar-container'>";
 echo "</div>";
 echo "</div>";
 
-$url='http://ssdscheduleapi20180326021240.azurewebsites.net/api/values';
-$result = file_get_contents($url);
-$resultData = json_decode($result);
-echo getYear($resultData[0]->date);
-echo getMonth($resultData[100]->date);
+
+// echo getYear($resultData[0]->date);
+// echo getMonth($resultData[0]->date);
+echo getDayOfWeek($resultData[0]->date);
 // print_r ($resultData[]);
 //echo gettype($resultData[0]->date);
 
