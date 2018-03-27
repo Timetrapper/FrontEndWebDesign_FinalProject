@@ -33,11 +33,6 @@
     }
 }
 
-.schedule-body {
-    display: flex;
-    text-align: center;
-}
-
 .calendar-container{
     margin-left: 15px;
     margin-right: 15px;
@@ -47,11 +42,6 @@
     h1, h2 {
         color: white;
     }
-}
-
-.schedule-body {
-    display: flex;
-    text-align: center;
 }
 
 .KARL-calendar-container {
@@ -79,8 +69,8 @@
 }
 
 .day {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     background-color: white;   
@@ -143,7 +133,3 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.wrapper {
-    background-color: white;
-    @include center;
-}
