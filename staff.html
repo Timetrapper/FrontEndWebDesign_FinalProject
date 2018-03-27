@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,32 @@
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" id="bootstrap-css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
     <script>
-        jQuery(function(){
+        jQuery(function () {
             jQuery('#header-placeholder').load('header.html');
             jQuery('#footer-placeholder').load('footer.html');
         });
     </script>
 </head>
 
+<header>
+    <div id="header-placeholder"></div>
+</header>
+
 <body>
-    <div class="wrapper">
-        <header>
-            <div id="header-placeholder"></div>
-        </header>
-        <main>
-            <h1>I'm the content!</h1>
-        </main>
-        <footer>
-            <div id="footer-placeholder"></div>
-        </footer>
-    </div>
+    <main class="wrapper">
+        <h1>I'm the content!</h1>
+
+    </main>
 </body>
+
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
 
 </html>
