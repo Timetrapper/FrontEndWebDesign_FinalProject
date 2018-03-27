@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>calendar test</title>
+    <title>calendar</title>
 
     <link id="styleElement" rel="stylesheet" href="./styles/calendar.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -56,6 +56,83 @@
         });
     </script>
 </head>
+<?php
+
+function getYear($date){
+    echo explode("-",$date)[0];
+}
+
+function getMonth($date){
+    $numberMonth = explode("-",$date)[1];
+   // echo $numberMonth;
+   switch($numberMonth){
+       case "01":
+       echo "January";
+       break;
+       case "02":
+       echo "Feburay";
+       break;
+       case "03":
+       echo "March";
+       break;
+       case "04":
+       echo "April";
+       break;
+       case "09":
+       echo "September";
+       break;
+       case "10":
+       echo "October";
+       break;
+       case "11":
+       echo "November";
+       break;
+       case "12":
+       echo "December";
+       break;
+   }
+}
+
+function getDayOfWeek(){
+
+    
+}
+
+$months = array("September","October","November","December","January","Feburay","March","April");
+$daysOfWeek = array("Monday","Tuesday","Wednesday","Thursday","Friday");
+echo "<div class='wrapper'>";
+echo "<div class='KARL-calendar-container'>";
+      foreach ($months as $month)  {
+        echo " <div class='month'>";
+        echo "<h1 class='schedule-month'>".$month."</h1>";
+        foreach ($daysOfWeek as $dayOfWeek){
+            echo   "<h2 class='calender-day-of-week'>".$dayOfWeek."</h2>";
+        }
+                    // foreach (){
+            //     echo   "<div class='day'>";
+            //     echo   "<h3 class='day-of-week'>".Monday."</h3>";
+            //     echo   "<h3 class='date'>".September 11, 2017."</h3>";
+            //     echo   "<p class='subject'>".Orientation / Study Skills."</p>";
+            //     echo   "<p class='instructor'>".Pat McGee / Marlene Delanghe."</p>";
+            //     echo   "</div>";
+            // }
+        echo "</div>";
+      }
+
+
+echo "</div>";
+echo "</div>";
+
+$url='http://ssdscheduleapi20180326021240.azurewebsites.net/api/values';
+$result = file_get_contents($url);
+$resultData = json_decode($result);
+echo getYear($resultData[0]->date);
+echo getMonth($resultData[100]->date);
+// print_r ($resultData[]);
+//echo gettype($resultData[0]->date);
+
+
+?>
 
 <body class="schedule-body">
     <header>
