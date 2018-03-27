@@ -13,10 +13,10 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script>
         $.get("navigation_head.html", function (data) {
-            $("#nav-placeholder").replaceWith(data);
+            $("#header-placeholder").replaceWith(data);
         });
         $.get("navigation_footer.html", function (data) {
-            $("#nav-foot-placeholder").replaceWith(data);
+            $("#footer-placeholder").replaceWith(data);
         });
     </script>
     <script>
@@ -59,7 +59,7 @@
 
 <body class="schedule-body">
     <header>
-        <div id="nav-placeholder"></div>
+        <div id="header-placeholder"></div>
     </header>
     <main>
         <div class="wrapper">
@@ -1078,7 +1078,7 @@
         </div>
     </main>
     <footer>
-        <div id="nav-foot-placeholder"></div>
+        <div id="footer-placeholder"></div>
     </footer>
 </body>
 
