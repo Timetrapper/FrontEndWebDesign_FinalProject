@@ -1,7 +1,5 @@
 #programmer-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include center;
 }
 
 .welcome_padding {

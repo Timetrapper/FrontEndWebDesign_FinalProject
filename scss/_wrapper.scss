@@ -1,8 +1,13 @@
 .wrapper{
+    width: 100%;
     background-color: $bg-wrapper-color;
     max-width: $site-width;
     padding: 0 80px;
     @include center;
     overflow: hidden;
     margin: 0 auto;
+}
+
+.wrapper:after {
+    display: block;
 }

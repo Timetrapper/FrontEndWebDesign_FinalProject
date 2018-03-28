@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 // Utility Imports
-@import 'functions';
 @import 'variables';
+@import 'functions';
 @import 'mixins';
 
 // Resets
@@ -11,14 +11,16 @@
 // Typography
 @import 'typography';
 
-// Page elements
+// Media Queries
+@import 'include-media';
+
+// Page Elements
 @import 'body';
 @import 'container';
 @import 'features';
 @import 'image';
 @import 'list';
-@import 'nav-head';
-@import 'nav-main';
+
 @import 'paragraph';
 @import 'table';
 @import 'wrapper';

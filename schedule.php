@@ -200,7 +200,6 @@ echo "<div class='KARL-calendar-container'>";
       }
 echo "</div>";
 echo "</div>";
-echo dayFromMonday($resultData[37]->date);
 ?>
     </main>
     <footer>
