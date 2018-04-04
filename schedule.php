@@ -18,18 +18,27 @@
     </script>
     <script>
         var calendarView = true
-
         function toggleScheduleView() {
+            
             let styleEl = document.getElementById('styleElement')
             let button = document.getElementById('calendar-toggle')
             if (calendarView) {
                 styleEl.href = "./styles/scheduleList.css"
                 button.textContent = "Calendar View"
                 calendarView = false
+                sessionStorage.setItem('buttonText', 'Calendar View');
+                sessionStorage.setItem('cssLink','./styles/scheduleList.css')
+
+
+
             } else {
                 styleEl.href = "./styles/calendar.css"
                 button.textContent = "List View"
                 calendarView = true
+                
+                sessionStorage.setItem('buttonText', 'List View');
+                sessionStorage.setItem('cssLink','./styles/calendar.css')
+
             }
         }
 
@@ -46,7 +55,8 @@
                     styleEl.href = "./styles/scheduleList.css"
                     document.getElementById('calendar-toggle').style.display = "none"
                 } else {
-                    styleEl.href = "./styles/calendar.css"
+                    styleEl.href = sessionStorage.getItem('cssLink')
+                    document.getElementById('calendar-toggle').textContent = sessionStorage.getItem('buttonText')
                     document.getElementById('calendar-toggle').style.display = "flex"
                 }
             });
@@ -206,4 +216,13 @@ echo "</div>";
         <div id="footer-placeholder"></div>
     </footer>
 </body>
+<script>
+        let styleEl = document.getElementById('styleElement')
+
+        if (document.documentElement.clientWidth < 850 ){
+            calendarView = false
+            styleEl.href = "./styles/scheduleList.css"
+            document.getElementById('calendar-toggle').style.display = "none"
+        }
+</script>
 </html>
