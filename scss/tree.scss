@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
 .tree, .tree ul {
     margin:0;
     padding:0;
@@ -62,6 +65,32 @@
     outline: 0;
 }
 
+#tree{
+    width: 300px;
+}
+
 main{
     padding: 20px;
+}
+
+@include mq($phoneBorder){
+
+    .wrapper{
+        padding: 0px;
+    }
+
+    // div[data-role="wrapper"] {
+    //     /* Styles */
+    //    width: 100%;
+    // }
+
+}
+
+
+@include mq($mediumPhoneBorder){
+    .title{
+        font-size: 25px;
+    }
+
+
 }
