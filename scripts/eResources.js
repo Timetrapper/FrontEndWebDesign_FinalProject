@@ -14,6 +14,7 @@ $(document).ready(function () {
         text: 'Official Links',
         children: [{
           text: "<a target='_blank' href='https://www.bcit.ca/study/programs/699ccertt'>BCIT SSD Homepage</a>",
+          text: "",
         }, {
           text: 'Visual Studio'
         }, {
