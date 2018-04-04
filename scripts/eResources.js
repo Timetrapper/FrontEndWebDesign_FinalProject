@@ -19,8 +19,6 @@ $(document).ready(function () {
           text: "<a target='_blank' title='Reddit feed from Feb-2018 discussing the merits of each program.' href='https://www.reddit.com/r/BCIT/comments/7olch3/cst_vs_ssd/?st=jflixxsq&sh=8945c0af'>CST vs. SSD</a>",
         }, {
           text: "<a target='_blank' title='Reddit feed from Mar-2015 discussing how the college is seen among Vancouver's tech companies' href='https://www.reddit.com/r/BCIT/comments/7olch3/cst_vs_ssd/?st=jflixxsq&sh=8945c0af'>BCIT in the Eyes of Vancouver</a>",
-        }, {
-          text: "<a target='_blank' title='Website from Apr-2015 discussing Vancouver among the seven best places to study web development in North America' href='http://designpotato.com/7-best-institutes-to-study-web-development-in-north-america/'>Where to study in North America</a>",
         }]
       },
       {
