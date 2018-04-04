@@ -21,20 +21,39 @@
             jQuery('#footer-placeholder').load('footer.html');
         });
     </script>
+
+    <!-- Custom Google Search box -->
+    <script>
+        (function () {
+            var cx = '005193859620632013770:w8iwuaypqiq';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
 </head>
 
 <header>
     <div id="header-placeholder"></div>
 </header>
-<!--SSDP 1501	Systems Foundations 1
- 	SSDP 2501	Systems Foundations 2
- 	SSDP 3501	Systems Foundations 3
- 	SSDP 4001	Specialty Topics
- 	SSDP 5001	Projects-->
+
+<!--
+SSDP 1501	Systems Foundations 1
+SSDP 2501	Systems Foundations 2
+SSDP 3501	Systems Foundations 3
+SSDP 4001	Specialty Topics
+SSDP 5001	Projects
+-->
 
 <body>
     <main class="wrapper">
         <h1>Courses</h1>
+        <!-- <div style="border: 1px solid blue;">
+            <gcse:searchbox></gcse:searchbox>
+        </div> -->
         <h3>Jump to:</h3>
         <ul>
             <li>
