@@ -13,10 +13,9 @@ $(document).ready(function () {
     dataSource: [{
         text: 'Official Links',
         children: [{
-          text: "<a target='_blank' href='https://www.bcit.ca/study/programs/699ccertt'>BCIT SSD Homepage</a>",
-          text: "",
+          text: "<a target='_blank' title='hoverin word' href='https://www.bcit.ca/study/programs/699ccertt'>BCIT SSD Homepage</a>",
         }, {
-          text: 'Visual Studio'
+          text: "Description",
         }, {
           text: 'Android Studio'
         }]
