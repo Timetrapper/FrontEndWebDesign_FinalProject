@@ -224,6 +224,15 @@ echo "</div>";
             calendarView = false
             styleEl.href = "./styles/scheduleList.css"
             document.getElementById('calendar-toggle').style.display = "none"
+            sessionStorage.setItem('buttonText', 'Calendar View');
+            sessionStorage.setItem('cssLink','./styles/scheduleList.css')
+
+
+        }else {
+            calendarView = true
+            styleEl.href = "./styles/calendar.css"
+            sessionStorage.setItem('buttonText', 'List View');
+            sessionStorage.setItem('cssLink','./styles/calendar.css')
         }
 </script>
 </html>
