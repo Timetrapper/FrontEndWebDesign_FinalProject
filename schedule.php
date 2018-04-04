@@ -19,7 +19,7 @@
     <script>
         var calendarView = true
         function toggleScheduleView() {
-            
+            //test
             let styleEl = document.getElementById('styleElement')
             let button = document.getElementById('calendar-toggle')
             if (calendarView) {
