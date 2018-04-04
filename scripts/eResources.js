@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('#tree').tree({
+  var tree = $('#tree').tree({
     uiLibrary: 'bootstrap4',
     dataSource: [{
         text: 'Official Links',
@@ -38,6 +38,8 @@ $(document).ready(function () {
         }]
       }
     ],
-    width: '100%'
+    width: '100%',
   });
+  
+  tree.expandAll()
 });
