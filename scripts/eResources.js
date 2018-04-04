@@ -1,12 +1,3 @@
-// Provide an organized (by category) of helpful links to online web resources (blogs, technical
-//   resources (MDN), etc…) or links to useful free web and software development software (text
-//   editors, images editors, etc) that you feel would be helpful to current and future students in the
-//   SSD program
-//   - Provide a minimum of 8 resources
-//   - Optional (but nice to have)
-//   o Provide a summary paragraph description of what each link is
-//   o A screen shot or logo of the web site
-
 $(document).ready(function () {
   $('#tree').tree({
     uiLibrary: 'bootstrap4',
