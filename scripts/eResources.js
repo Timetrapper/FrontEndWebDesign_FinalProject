@@ -55,6 +55,6 @@ $(document).ready(function () {
         }]
       }
     ],
-    width: 500
+    width: '100%'
   });
 });

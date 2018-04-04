@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
 label {
     color: #333;
 }
@@ -11,4 +14,12 @@ label {
 
 .form-check{
     padding-right: 100px;
+}
+
+@include mq($mediumPhoneBorder){
+
+    .wrapper{
+        padding: 0px;
+    }
+
 }

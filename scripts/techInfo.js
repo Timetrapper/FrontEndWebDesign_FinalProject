@@ -7,7 +7,6 @@ $(document).ready(function() {
       { text: 'Web Services Requirements', children: [ { text: 'AWS' },  { text: 'GitHub' },  { text: 'Mlab' }, { text: 'Azure' },{ text: 'HeroKu' }] },
       { text: 'Developer Environment Setup Recommendations / Requirements', children: [ { text: 'Visual Studio Code' },  { text: 'Visual Studio 2017' },  { text: 'GitHub Desktop' } ] }
     ],
-    width: 500
-    
+    width: '100%'
   });
 });
