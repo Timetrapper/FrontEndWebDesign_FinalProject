@@ -12,3 +12,40 @@ tr {
     align-items: center;
     text-align: center;
 } 
+
+#table-images {
+    justify-content: center;
+    align-items: center;
+}
+
+.table-instructors {
+
+    thead {
+        th {
+            text-align: center;
+        }
+    }
+
+    tbody {
+
+        td {
+            position: relative;
+
+            span {
+                //position: absolute;
+                //display: block;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+    }
+
+}
