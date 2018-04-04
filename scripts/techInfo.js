@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('#tree').tree({
+ var tree =  $('#tree').tree({
     uiLibrary: 'bootstrap4',
     dataSource: [{
         text: 'Software Requirements and Recommendations',
@@ -51,6 +51,10 @@ $(document).ready(function () {
         }]
       }
     ],
-    width: '100%'
+    width: '100%',
+    autoLoad: true
   });
+
+  tree.expandAll();
+
 });
