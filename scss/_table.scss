@@ -1,15 +1,45 @@
-table{
-    background-color: $bg-table-color;
-    table-layout: fixed;
-    width: 100%;
-    
-    th, td {
-        border: 2px solid white;
-        padding: 15px;
-    }
-}
-
 #table-container {
     display: flex;
     justify-content: center;
+}
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+    /* Set all of our table elements to display type block */
+    display: block;
+    background-color: $bg-table-color;
+}
+
+th,
+td {
+    border: 2px solid white;
+    padding: 15px;
+}
+
+/* Set our table to act normally after we hit 1024px */
+@media only screen and (min-width: 1024px) {
+    table {
+        display: table;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tbody {
+        display: table-row-group;
+    }
+    tfoot {
+        display: table-footer-group;
+    }
+    tr {
+        display: table-row;
+    }
+    th,
+    td {
+        display: table-cell;
+    }
 }

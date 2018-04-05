@@ -1,6 +1,6 @@
 #staff-table-container {
-    display: flex; justify-content: center;
-    
+    display: flex;
+    justify-content: center;
 }
 
 #staff-table-header {
@@ -11,29 +11,25 @@ tr {
     justify-content: center;
     align-items: center;
     text-align: center;
-} 
+}
 
 #table-images {
     justify-content: center;
     align-items: center;
+    width: 10%;
+    height: auto;
 }
 
 .table-instructors {
-
     thead {
         th {
             text-align: center;
         }
     }
-
     tbody {
-
         td {
             position: relative;
-
             span {
-                //position: absolute;
-                //display: block;
                 display: flex;
                 width: 100%;
                 height: 100%;
@@ -43,9 +39,6 @@ tr {
                 top: 0;
                 left: 0;
             }
-
         }
-
     }
-
 }
